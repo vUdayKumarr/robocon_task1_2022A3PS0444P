@@ -12,5 +12,9 @@ class Solution:
                 list2=list2.next
             tail=tail.next
 
-        tail.next= list1 or list2
+        if not list1:
+            tail.next=list2
+        else:
+            tail.next=list1
+        
         return dummy.next
